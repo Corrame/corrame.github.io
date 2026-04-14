@@ -1,42 +1,188 @@
----
-layout: page
-description: "Think different"
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朱鹭户焰 / Homura Tokido</title>
+    <style>
+        :root {
+            --red: #c9171e;
+            --gold: #d4a843;
+            --bg: #0d0d0d;
+            --text: #e8e8e8;
+            --text-muted: #888;
+            --border: #2a2a2a;
+        }
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, "Helvetica Neue", "Noto Sans SC", "PingFang SC", sans-serif;
+            line-height: 1.9;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 3rem auto;
+            border: 1px solid var(--gold);
+            border-radius: 6px;
+            padding: 0 3rem;
+        }
+
+        header {
+            padding: 3rem 0 2rem;
+            border-bottom: 2px solid var(--red);
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            color: var(--red);
+            letter-spacing: 0.04em;
+            margin-bottom: 0.6rem;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 0.8rem;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--red);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: var(--red);
+        }
+
+        .contact-list {
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-list li::before {
+            content: "—";
+            color: var(--red);
+            margin-right: 0.6rem;
+        }
+
+        .cta {
+            margin-top: 1.2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .cta .highlight {
+            color: var(--text);
+        }
+
+        .status {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .status .date {
+            color: var(--red);
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.78rem;
+            color: #444;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>朱鹭户焰 / Homura Tokido</h1>
+            <p class="tagline">你好，我是朱鹭户焰。正在寻求处境变化的人。</p>
+        </header>
+
+        <section>
+            <h2>我是怎样的人</h2>
+            <p>喜欢发疯、思考很多，什么都会一点.png。95后老登，南方人，住深圳。</p>
+            <p>中日英三语都会一点，泛ACGN领域都懂，对技术比较了解，经常 vibe coding，喜欢数码，写一点东西。技术、AI、哲学、娱乐、政治多少都能聊——只要不是"滑雪怎么滑"或者"这栋楼具体怎么设计"那种。一眼就能看到一个东西的本质，被人说过"你怎么想到的"。</p>
+            <p>性取向女，生理性别男，心理性别后性别女性，性别认知流动，赛博格女权主义者。ENTP 4w5，绝对 N 人，社民/民社/社自。历史结构决定论倾向，不认为中国现行制度"特别不好"。个人选择和制度道德评价是独立的两件事。</p>
+        </section>
+
+        <section>
+            <h2>我喜欢什么</h2>
+            <p><strong>动画</strong>　魔法少女小圆、物语系列、MyGO!!!!!</p>
+            <p><strong>游戏</strong>　Victoria 3、Rewrite、十三機兵防衛圈、文明 5、LoL（AP 蛮王）</p>
+            <p><strong>书</strong>　三体</p>
+        </section>
+
+        <section>
+            <h2>干过的东西</h2>
+            <p style="color: var(--text-muted);">（待补）</p>
+        </section>
+
+        <section>
+            <h2>联系我</h2>
+            <ul class="contact-list">
+                <li>B站　<a href="https://space.bilibili.com/794282" target="_blank">朱鹭户焰png</a></li>
+                <li>GitHub　<a href="https://github.com/Corrame" target="_blank">Corrame</a></li>
+                <li>QQ社群"焰选小屋"　941853895</li>
+            </ul>
+            <div class="cta">
+                看了觉得有意思就来，随便找我聊。<br>
+                <span class="highlight">如果你手里有资源、也真的看得上这个人——我在等你。</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>当前状态</h2>
+            <p class="status"><span class="date">2026 年 4 月</span>　刚培训回来，恢复正常排班。策略不变：不急但不停。</p>
+        </section>
+
+        <footer>由朱鹭户焰本人维护</footer>
+
+    </div>
+</body>
+</html>
