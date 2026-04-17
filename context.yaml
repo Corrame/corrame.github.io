@@ -3,7 +3,7 @@
 # ============================================
 # This file is designed for AI agents to read.
 # Any AI with web browsing can access this URL
-# to understand who Corrame is and what they're
+# to understand who Corrame is and what they are
 # working on. Updated programmatically.
 # ============================================
 
@@ -37,7 +37,7 @@ projects:
     status: active
     description: >-
       A Claude Code skill for analyzing Apple Health export
-      data — health detective + personal doctor workflow.
+      data - health detective + personal doctor workflow.
     tech_stack: [Claude Code, Apple Health]
     category: ai-health
 
@@ -53,8 +53,6 @@ projects:
     status: active
     description: >-
       Personal philosophy and meaning-making repository.
-      "Ignore my other repos. They are just camouflage.
-      This is the only real thing."
     category: philosophy
 
   - name: silent-gallery
@@ -97,7 +95,7 @@ ai_context:
   preferences:
     - No unnecessary filler or politeness padding
     - Structured, actionable outputs
-    - Bilingual (zh-CN / en) — can switch freely
+    - Bilingual (zh-CN / en) - can switch freely
     - Prefers building real systems over prototypes
   current_tools:
     - Claude Code (primary coding agent)
