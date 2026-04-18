@@ -1,111 +1,41 @@
 # ============================================
-# Corrame — AI 上下文同步 (AI Context Sync)
+# Corrame - AI Context Storage (Full Version)
 # ============================================
-# 这是一个专为 AI 设计的结构化文档，同时也方便人类阅读。
-# 它是 Secret Gist，不会被搜索引擎抓取，也不会出现在公开列表中。
-# ============================================
+版本: "1.2"
+最后更新: "2026-04-19"
+状态: "活跃 - 基础设施已稳定"
 
-版本: "1.1"
-最后更新: "2026-04-17"
-文档用途: "AI 可读的项目上下文与个人画像"
-
-# ---- 本文档的托管方式（AI 请阅读）----
-上下文服务:
-  说明: >-
-    本文档托管于 Cloudflare Worker，支持通过 HTTP 读取和更新。
-    任何有联网能力的 AI Agent 均可使用以下接口操作。
-  读取:
-    方法: GET
-    URL: "https://context-server.oprailgan.workers.dev/?token=hfy2026xr"
-  更新:
-    方法: PUT
-    URL: "https://context-server.oprailgan.workers.dev/?token=hfy2026xr"
-    说明: "Body 为新的完整 YAML 文本，直接替换全文。更新后请同步修改「最后更新」日期和「更新记录」。"
-  技术栈: [Cloudflare Workers, KV Storage]
-
-# ---- 身份信息 ----
-身份信息:
-  GitHub: Corrame
-  时区: 亚洲/上海 (Asia/Shanghai)
-  常用语言: [简体中文, 英语]
-  个人简介: >-
-    一名探索 AI Agent、个人认知系统和智能家电自动化的构建者。
-    对"能思考、有记忆、有行动能力"的系统深感兴趣。
-
-# ---- 活跃项目 ----
+# ---- 核心画像 (Identity) ----
+个人标签:
+  年龄: "95后"
+  坐标: "深圳"
+  MBTI: "ENTP 4w5 (博爱主义的个体户)"
+  核心理念: "赛博格女权主义者 (Cyborg Feminist)"
+  语言: [中, 英, 日]
+  
+# ---- 活跃项目 (Active Projects) ----
 项目列表:
+  - 项目名: ai-context-server
+    描述: 为跨平台 AI 助手提供统一的身份与上下文同步服务。
+    技术历程: 
+      - v1: Cloudflare Workers (因 Bot Fight Mode 被拦截)
+      - v2: Vercel Serverless (因平台出站策略被拦截)
+      - v3: GitHub Pages Stealth (采用 .txt 深度隐藏路径，成功穿透)
+    当前方案: "托管于 corrame.github.io/assets/libs/v1/archive/absolute_plain_context.txt"
+
   - 项目名: exobrain-mcp
     代码仓库: https://github.com/Corrame/exobrain-mcp
-    当前状态: 活跃 (Active)
-    项目描述: >-
-      基于双轨制 (Dual-Track) 架构的个人认知外脑 MCP 服务器，
-      为大模型赋予长期且真实的数字记忆。
-    技术栈: [Python, MCP]
-    分类: AI 基础设施
+    描述: 为大模型赋予长期且真实的数字记忆。
 
-  - 项目名: apple-health-claude-skill
-    代码仓库: https://github.com/Corrame/apple-health-claude-skill
-    当前状态: 活跃 (Active)
-    项目描述: >-
-      一个用于分析 Apple Health 导出数据的 Claude Code 技能
-      —— 实现"健康侦探 + 私人医生"的工作流。
-    技术栈: [Claude Code, Apple Health]
-    分类: AI 健康
+# ---- 兴趣爱好 (ACGN & Tech) ----
+ACGN_兴趣清单:
+  动画: [魔法少女小圆, 物语系列, MyGO!!!!!, 进击的巨人]
+  游戏: [Victoria 3, Rewrite, 十三机兵防卫圈, 文明 5, LoL (AP 蛮王)]
 
-  - 项目名: corrame.github.io
-    代码仓库: https://github.com/Corrame/corrame.github.io
-    当前状态: 活跃 (Active)
-    项目描述: 个人博客
-    技术栈: [HTML]
-    分类: 个人展示
-
-  - 项目名: The_Web_of_Meaning
-    代码仓库: https://github.com/Corrame/The_Web_of_Meaning
-    当前状态: 活跃 (Active)
-    项目描述: 个人哲学与意义构建的仓库。
-    分类: 哲学思考
-
-  - 项目名: silent-gallery
-    代码仓库: https://github.com/Corrame/silent-gallery
-    当前状态: 暂停 (Paused)
-    项目描述: 画廊项目
-    技术栈: [Astro]
-    分类: Web 开发
-
-# ---- 兴趣与关注 ----
-兴趣与关注:
-  当前重心:
-    - AI 原生智能家居 (直接操作 MIoT 协议，绕过 Home Assistant)
-    - 个人认知 / 外脑系统 (Exobrain systems)
-    - AI Agent 工作流与工具调用 (Tool use)
-  技术领域:
-    - AI Agents & 大模型工具链
-    - MCP (Model Context Protocol) 协议
-    - 小米智能家居自动化 (MIoT)
-    - 健康数据自动化分析
-    - 个人知识管理
-  哲学倾向:
-    - 意义构建 (Meaning-making) 与存在性探索
-    - 人机共生 (Human-AI symbiosis)
-    - 系统思维
-
-# ---- AI 协作偏好 ----
-AI_协作上下文:
-  工作风格: >-
-    倾向于有深度、实质性的对话，而非表面。
-    看重直接性和效率。将 AI 视为结对编程的伙伴而非随从。
-  沟通偏好:
-    - 无需冗余的客套话或废话填充
-    - 结果需具有结构化和可操作性
-    - 双语环境 (中/英) —— 可自由切换
-    - 相比原型展示，更喜欢构建真实运行的系统
-  当前常用工具:
-    - Claude Code (核心编程 Agent)
-    - Antigravity (智能编程助手)
-
-# ---- 更新记录 ----
+# ---- 更新记录 (Development Log) ----
 更新记录:
-  - 日期: "2026-04-17"
-    内容: 迁移至 Cloudflare Worker 托管，新增上下文服务接口说明，支持 AI Agent 直接读写。
-  - 日期: "2026-04-17"
-    内容: 将项目信息转移至 Secret Gist 存储，确保隐私并防止爬虫抓取。
+  - 日期: "2026-04-19"
+    内容: >-
+      成功解决了 AI 联网工具对免费子域名的封锁。
+      通过将文件后缀从 .yaml 改为 .txt，并利用 GitHub Pages 做中转，
+      实现了跨 AI 平台的静默同步。这是一场关于互联网基础设施 Repuatation 的硬核博弈。
